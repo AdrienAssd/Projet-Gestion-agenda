@@ -7,8 +7,7 @@
 typedef struct s_d_list
 {
     int niv_max;
-    t_d_cell *head;
-    
+    t_d_cell **head;
 } t_d_list;
 
 t_d_list *createEmptyList(int niv_max);
