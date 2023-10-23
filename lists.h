@@ -1,8 +1,16 @@
-//
-// Created by Adrien Assouad on 23/10/2023.
-//
+#ifndef PROJET_SDD_LISTS_H
+#define PROJET_SDD_LISTS_H
+#include <stdio.h>
+#include <stdlib.h>
+#include "cells.h"
 
-#ifndef GESTION_AGENDA_LISTS_H
-#define GESTION_AGENDA_LISTS_H
+typedef struct s_d_list
+{
+    int niv_max;
+    t_d_cell *head;
+    
+} t_d_list;
 
-#endif //GESTION_AGENDA_LISTS_H
+t_d_list *createEmptyList(int niv_max);
+
+#endif //PROJET_SDD_LISTS_H
