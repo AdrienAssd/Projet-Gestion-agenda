@@ -2,5 +2,6 @@
 
 int main() {
 lililil
+    test
     return 0;
 }
