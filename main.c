@@ -1,15 +1,8 @@
 #include <stdio.h>
 #include "cells.h"
+#include "lists.h"
 
 int main() {
-    int nbValeur, nbNiveau;
-    t_d_cell *newcell;
-    printf("combien de valeurs voulez-vous ? ");
-    scanf("%d", &nbValeur);
-    printf("combien de niveaux voulez-vous ? ");
-    scanf("%d", &nbNiveau);
-    newcell = createCell(nbValeur, nbNiveau);
-
-
+    cellinlist();
     return 0;
 }

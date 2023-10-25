@@ -11,5 +11,7 @@ typedef struct s_d_list
 } t_d_list;
 
 t_d_list *createEmptyList(int niv_max);
-
+void addHeadList(t_d_list * list, t_d_cell * cell);
+void displayList(t_d_list list);
+t_d_list cellinlist();
 #endif //PROJET_SDD_LISTS_H
