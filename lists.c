@@ -1,6 +1,6 @@
 #include "lists.h"
 #include "cells.h"
-
+#include <math.h>
 t_d_list *createEmptyList(int niv_max)
 {
     t_d_list *newlist = (t_d_list*)malloc(sizeof(t_d_list));
@@ -14,7 +14,7 @@ t_d_list *createEmptyList(int niv_max)
 }
 
 
-void addHeadList(t_d_list * list, t_d_cell * cell){
+void addHeadSortList(t_d_list * list, t_d_cell * cell){
     for (int i = 0; i < cell->niveau; i++){
         if (list->head == NULL){
             list->head[i] = cell;
@@ -62,7 +62,12 @@ void displayList(t_d_list list){
         printf("[list head_%d @-]", i);
         while (temp != NULL){
             while (temp->value != temp2->value){
-                printf("-----------");
+                if(temp2->value <10){
+                    printf("----------");
+                }
+                else{
+                    printf("-----------");
+                }
                 temp2 = temp2->next[0];
             }
             printf("-->[ %d|@-]", temp->value);
@@ -70,18 +75,18 @@ void displayList(t_d_list list){
             temp2 = temp2->next[0];
         }
         while(temp2!=NULL && temp==NULL){
-            printf("-----------");
+            if(temp2->value <10){
+                printf("----------");
+            }
+            else{
+                printf("-----------");
+            }
             temp2 = temp2->next[0];
         }
         printf("-->NULL\n");
     }
     printf("\n");
 }
-
-
-
-
-
 
 
 
@@ -97,9 +102,47 @@ t_d_list cellinlist(){
     list = createEmptyList(nbNiveau);
     for (int i = 0; i < nbValeur; i++){
         newcell = user_choice_cell();
-        addHeadList(list, newcell);
+        addHeadSortList(list, newcell);
         displayList(*list);
     }
     displayList(*list);
     return *list;
+}
+
+
+/*t_d_list listNiv(int n){
+    int nbCell;
+    t_d_list * listNiv;
+    t_d_cell *newCell;
+    listNiv = createEmptyList(n);
+    nbCell = pow(2, n) - 1;
+    for (int i = 0; i < nbCell; i++) {
+        if ((i+1)%4 == 0){
+            newCell = createCell(i+1, 3);
+        }
+        else if ((i+1)%2 == 0){
+            newCell = createCell(i+1, 2);
+        }
+        else{
+            newCell = createCell(i+1, 1);
+        }
+        addHeadSortList(listNiv, newCell);
+    }
+    displayList(*listNiv);
+    return *listNiv;
+}*/
+
+t_d_list listNiv(int n){
+    int nbCell;
+    t_d_list * listNiv;
+    t_d_cell *newCell;
+    listNiv = createEmptyList(n);
+    nbCell = pow(2, n) - 1;
+    for (int i = 0; i < nbCell; i++) {
+        newCell = createCell(0, n);
+        addHeadSortList(listNiv, newCell);
+    }listNiv->head[0]->value=1;
+    displayList(*listNiv);
+
+    return *listNiv;
 }

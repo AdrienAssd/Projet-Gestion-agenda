@@ -4,5 +4,6 @@
 
 int main() {
     cellinlist();
+    //listNiv(3);
     return 0;
 }
