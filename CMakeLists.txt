@@ -9,4 +9,7 @@ add_executable(Gestion_agenda main.c
         lists.h
         timer.c
         timer.h
-        timer.c)
+        timer.c
+        research.c
+        research.h
+)

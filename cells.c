@@ -12,7 +12,7 @@ t_d_cell * createCell(int valeur , int niveau){
 t_d_cell * user_choice_cell(){
     int valeur, nbNiveau;
     t_d_cell *newcell;
-    printf("quelle valeurs voulez-vous ? ");
+    printf("quelle valeur voulez-vous ? ");
     scanf("%d", &valeur);
     printf("combien de niveaux voulez-vous ? ");
     scanf("%d", &nbNiveau);
