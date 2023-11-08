@@ -5,9 +5,10 @@
 
 int main() {
     t_d_list list;
-    list = cellinlist();
+    //list = cellinlist();
     //printf("%d\n",researchclassique(list, 5));
-    printf("%d",researchNivHaut(list, 5));
-    //listNiv(3);
+    //printf("%d",researchNivHaut(list, 5));
+    //createListNiv(3);
+    timeResearch();
     return 0;
 }

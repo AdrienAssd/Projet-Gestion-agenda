@@ -110,39 +110,25 @@ t_d_list cellinlist(){
 }
 
 
-/*t_d_list listNiv(int n){
-    int nbCell;
+
+t_d_list createListNiv(int n){
+    int nbCell, niveau;
     t_d_list * listNiv;
     t_d_cell *newCell;
     listNiv = createEmptyList(n);
-    nbCell = pow(2, n) - 1;
+    nbCell = (int)pow(2, n) - 1;
     for (int i = 0; i < nbCell; i++) {
-        if ((i+1)%4 == 0){
-            newCell = createCell(i+1, 3);
+        niveau = 0;
+        for (int j = 0; j<n ;j++)
+        {
+            if ((i+1)%(int)pow(2, j)==0)
+            {
+                niveau++;
+            }
         }
-        else if ((i+1)%2 == 0){
-            newCell = createCell(i+1, 2);
-        }
-        else{
-            newCell = createCell(i+1, 1);
-        }
+        newCell = createCell(i+1, niveau);
         addHeadSortList(listNiv, newCell);
     }
     displayList(*listNiv);
-    return *listNiv;
-}*/
-
-t_d_list listNiv(int n){
-    int nbCell;
-    t_d_list * listNiv;
-    t_d_cell *newCell;
-    listNiv = createEmptyList(n);
-    nbCell = pow(2, n) - 1;
-    for (int i = 0; i < nbCell; i++) {
-        newCell = createCell(0, n);
-        addHeadSortList(listNiv, newCell);
-    }listNiv->head[0]->value=1;
-    displayList(*listNiv);
-
     return *listNiv;
 }

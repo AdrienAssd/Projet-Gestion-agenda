@@ -8,4 +8,5 @@
 
 int researchclassique (t_d_list list, int val);
 int researchNivHaut(t_d_list list, int val);
+void timeResearch();
 #endif //GESTION_AGENDA_RESEARCH_H

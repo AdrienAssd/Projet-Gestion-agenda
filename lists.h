@@ -14,5 +14,5 @@ t_d_list *createEmptyList(int niv_max);
 void addHeadSortList(t_d_list * list, t_d_cell * cell);
 void displayList(t_d_list list);
 t_d_list cellinlist();
-t_d_list listNiv(int n);
+t_d_list createListNiv(int n);
 #endif //PROJET_SDD_LISTS_H
