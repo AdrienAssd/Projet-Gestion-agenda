@@ -129,6 +129,6 @@ t_d_list createListNiv(int n){
         newCell = createCell(i+1, niveau);
         addHeadSortList(listNiv, newCell);
     }
-    displayList(*listNiv);
+    //displayList(*listNiv);
     return *listNiv;
 }

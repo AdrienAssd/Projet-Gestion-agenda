@@ -6,7 +6,7 @@
 #include "lists.h"
 #include "cells.h"
 #include "timer.h"
-
+#include "math.h"
 
 int researchclassique (t_d_list list, int val){
     t_d_cell * temp = list.head[0];
@@ -51,15 +51,15 @@ void timeResearch(){
     int level;
     char *time_lvl0;
     char *time_all_levels;
-    level = 7;
-    while (level != 11)
+    level = 3;
+    while (level != 17)
     {
+        printf("en cours %d\n",level);
         t_d_list list = createListNiv(level);
         //faire test pour lvl0
-        printf("en cours %d\n",level);
         startTimer();
-        for (int i = 0; i < 100000; i++){
-            researchclassique(list, i);
+        for (int i = 0; i < 10000; i++){
+            researchclassique(list, rand() % (int)pow(2,level));
         }
         stopTimer();
         displayTime();
@@ -67,7 +67,7 @@ void timeResearch(){
         //faire test pour all lvls
         startTimer();
         for (int i = 0; i < 10000; i++){
-            researchNivHaut(list, i);
+            researchNivHaut(list, rand() % (int)pow(2,level));
         }
         stopTimer();
         displayTime();
