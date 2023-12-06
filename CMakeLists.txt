@@ -7,4 +7,6 @@ add_executable(Gestion_agenda main.c
         cells.c
         lists.c
         research.c
-        timer.c)
+        timer.c
+        contact.c
+        contact.h)
