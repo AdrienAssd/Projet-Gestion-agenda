@@ -1,6 +1,8 @@
 #include "lists.h"
 #include "cells.h"
 #include <math.h>
+
+// Fonction qui créant une liste à niveau vide avec comme argument le nombre de niveau max
 t_d_list *createEmptyList(int niv_max)
 {
     t_d_list *newlist = (t_d_list*)malloc(sizeof(t_d_list));
@@ -13,7 +15,7 @@ t_d_list *createEmptyList(int niv_max)
     return newlist;
 }
 
-
+// Fonction qui insère une cellule à niveaux en tête de liste
 void addHeadSortList(t_d_list * list, t_d_cell * cell){
     for (int i = 0; i < cell->niveau; i++){
         if (list->head == NULL){
@@ -54,6 +56,7 @@ void addHeadSortList(t_d_list * list, t_d_cell * cell){
     printf("\n");
 }*/
 
+// Fonction qui affiche l'ensemble des cellules de la liste
 void displayList(t_d_list list){
     t_d_cell * temp, *temp2;
     for (int i = 0; i <list.niv_max; i++){
@@ -88,9 +91,7 @@ void displayList(t_d_list list){
     printf("\n");
 }
 
-
-
-
+// Fonction 
 t_d_list cellinlist(){
     int nbValeur, nbNiveau;
     t_d_list * list;
