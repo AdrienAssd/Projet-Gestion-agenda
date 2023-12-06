@@ -24,10 +24,10 @@ t_d_cell * user_choice_cell(){
     do{
         printf("Veuillez saisir le nombre de niveaux (entier et strictement supérieur à 1) : ");
         scanf("%d", &nbNiveau);
-        if (nbNiveau <= 0) {
+        if (nbNiveau <= 1) {
             printf("Le nombre doit être strictement supérieur à 1. Réessayez.\n");
         }
-    } while (valeur <= 0);
+    } while (valeur <= 1);
     newcell = createCell(valeur, nbNiveau);
     return newcell;
 }
