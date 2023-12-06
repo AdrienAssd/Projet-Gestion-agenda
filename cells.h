@@ -11,7 +11,7 @@ typedef struct s_d_cell
     struct s_d_cell **next;
 } t_d_cell;
 
-// Prototype des fonctions
+// Prototypes des fonctions
 t_d_cell * createCell(int valeur , int niveau);
 t_d_cell * user_choice_cell();
 
