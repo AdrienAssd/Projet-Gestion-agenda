@@ -15,17 +15,17 @@ t_d_cell * user_choice_cell(){
     int valeur, nbNiveau;
     t_d_cell *newcell;
     do{
-        printf("Veuillez saisir une valeur entière et strictement supérieure 0 : ");
+        printf("Veuillez saisir une valeur entière et strictement supérieure à 0 : ");
         scanf("%d", &valeur);
         if (valeur <= 0) {
             printf("La valeur doit être strictement supérieure à 0. Réessayez.\n");
         }
     } while (valeur <= 0);
     do{
-        printf("Veuillez saisir le nombre de niveaux (entier et strictement supérieure 0) : ");
+        printf("Veuillez saisir le nombre de niveaux (entier et strictement supérieur à 1) : ");
         scanf("%d", &nbNiveau);
         if (nbNiveau <= 0) {
-            printf("La valeur doit être strictement supérieure à 0. Réessayez.\n");
+            printf("Le nombre doit être strictement supérieur à 1. Réessayez.\n");
         }
     } while (valeur <= 0);
     newcell = createCell(valeur, nbNiveau);
