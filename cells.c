@@ -27,7 +27,7 @@ t_d_cell * user_choice_cell(){
         if (nbNiveau <= 1) {
             printf("Le nombre doit être strictement supérieur à 1. Réessayez.\n");
         }
-    } while (valeur <= 1);
+    } while (nbNiveau <= 1);
     newcell = createCell(valeur, nbNiveau);
     return newcell;
 }
