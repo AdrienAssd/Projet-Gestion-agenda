@@ -15,7 +15,7 @@ t_d_list *createEmptyList(int niv_max)
     return newlist;
 }
 
-// Fonction qui insère une cellule à niveaux en tête de liste
+// Fonction qui insère une cellule à niveaux par la tête de liste en triant par ordre alphabétique
 void addHeadSortList(t_d_list * list, t_d_cell * cell){
     for (int i = 0; i < cell->niveau; i++){
         if (list->head == NULL){
@@ -40,7 +40,6 @@ void addHeadSortList(t_d_list * list, t_d_cell * cell){
         }
     }
 }
-
 
 /*void displayList(t_d_list list){
     t_d_cell * temp;
@@ -91,7 +90,7 @@ void displayList(t_d_list list){
     printf("\n");
 }
 
-// Fonction 
+// Fonction qui permet d'appeller qui toutes les autres pour créer une liste vide, demander à l'utilisateur les cellules qu'il souhaite et afficher la liste triée
 t_d_list cellinlist(){
     int nbValeur, nbNiveau;
     t_d_list * list;
@@ -110,8 +109,7 @@ t_d_list cellinlist(){
     return *list;
 }
 
-
-
+// Fonction qui créer un tableau listNiv de (2^n)-1 entier avec deux niveaux toutes les deux itérations et trois niveaux toutes les 4 itérations
 t_d_list createListNiv(int n){
     int nbCell, niveau;
     t_d_list * listNiv;
