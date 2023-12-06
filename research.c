@@ -36,7 +36,6 @@ int researchNivHaut(t_d_list list, int val){
         else{
             save = list.head[i-1];
         }
-
     }
     return 0;
 }
