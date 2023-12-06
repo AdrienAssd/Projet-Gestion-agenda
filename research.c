@@ -1,13 +1,10 @@
-//
-// Created by Adrien Assouad on 07/11/2023.
-//
-
 #include "research.h"
 #include "lists.h"
 #include "cells.h"
 #include "timer.h"
 #include "math.h"
 
+// Fonction qui permet de rechercher une valeur au niveau 0 dans la liste
 int researchclassique (t_d_list list, int val){
     t_d_cell * temp = list.head[0];
     while (temp != NULL){
@@ -19,8 +16,7 @@ int researchclassique (t_d_list list, int val){
     return 0; // La valeur n'est pas trouvée
 }
 
-
-
+// Fonction qui recherche une valeur sur tous les niveaux de la liste
 int researchNivHaut(t_d_list list, int val){
     int nivMax = list.niv_max-1;
     t_d_cell * temp = list.head[nivMax];
@@ -45,6 +41,7 @@ int researchNivHaut(t_d_list list, int val){
     return 0;
 }
 
+// Fonction qui permet de tester pour 10000 itérations le temps de la recherche classique et de la recherche pour tous les niveaux
 void timeResearch(){
     FILE *log_file = fopen("log.txt","w");
     char format[] = "%d\t%s\t%s\n" ;
