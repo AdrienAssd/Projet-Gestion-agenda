@@ -95,10 +95,20 @@ t_d_list cellinlist(){
     int nbValeur, nbNiveau;
     t_d_list * list;
     t_d_cell * newcell;
-    printf("combien de valeurs voulez-vous ? ");
-    scanf("%d", &nbValeur);
-    printf("combien de niveaux voulez-vous ? ");
-    scanf("%d", &nbNiveau);
+    do{
+        printf("Combien de valeurs voulez-vous ? ");
+        scanf("%d", &nbValeur);
+        if (nbValeur <= 0) {
+            printf("La valeur doit être strictement supérieure à 0. Réessayez.\n");
+        }
+    } while (nbValeur <= 0);
+    do{
+        printf("Veuillez saisir le nombre de niveaux (entier et strictement supérieur à 1) : ");
+        scanf("%d", &nbNiveau);
+        if (nbNiveau <= 1) {
+            printf("Le nombre doit être strictement supérieur à 1. Réessayez.\n");
+        }
+    } while (nbNiveau <= 1);
     list = createEmptyList(nbNiveau);
     for (int i = 0; i < nbValeur; i++){
         newcell = user_choice_cell();
