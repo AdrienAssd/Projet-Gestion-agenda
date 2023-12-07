@@ -90,7 +90,7 @@ void displayList(t_d_list list){
     printf("\n");
 }
 
-// Fonction qui permet d'appeller qui toutes les autres pour créer une liste vide, demander à l'utilisateur les cellules qu'il souhaite et afficher la liste triée
+// Fonction qui permet d'appeller toutes les autres pour créer une liste vide, demander à l'utilisateur les cellules qu'il souhaite et afficher la liste triée
 t_d_list cellinlist(){
     int nbValeur, nbNiveau;
     t_d_list * list;
