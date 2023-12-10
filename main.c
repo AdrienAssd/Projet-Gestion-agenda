@@ -6,13 +6,24 @@
 
 int main() {
     t_d_list list;
-    //list = cellinlist();
-    //printf("%d\n",researchclassique(list, 5));
-    //printf("%d",researchNivHaut(list, 5));
-    //createListNiv(3);
-    //timeResearch();
+    //Partie 1
+    printf("Partie 1\n");
 
-    Agenda *agenda = (Agenda *)malloc(sizeof(Agenda));
+    list = cellinlist();
+    displayList(list);
+
+
+    //Partie 2
+    printf("Partie 2\n");
+
+    list = createListNiv(3);
+    displayList(list);
+    timeResearch();
+
+
+    //Partie 3
+
+    /*Agenda *agenda = (Agenda *)malloc(sizeof(Agenda));
     agenda->head = NULL;
 
     int nb_entrees;
@@ -30,6 +41,6 @@ int main() {
     while (currentEntree != NULL) {
         afficher_entree_agenda(currentEntree);
         currentEntree = currentEntree->next;
-    }
+    }*/
     return 0;
 }
